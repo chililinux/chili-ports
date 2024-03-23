@@ -1,4 +1,4 @@
-ntp-4.2.8p15-1
+ntp-4.2.8p17-2
 drwxr-xr-x root/root    etc/
 -rw-r--r-- root/root    etc/ntp.conf
 drwxr-xr-x root/root    etc/rc.d/

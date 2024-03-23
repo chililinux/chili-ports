@@ -1,4 +1,4 @@
-pipewire-0.3.70-1
+pipewire-1.0.0-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/alsa/
 drwxr-xr-x root/root    etc/alsa/conf.d/
@@ -209,6 +209,9 @@ drwxr-xr-x root/root    usr/include/spa-0.2/spa/param/bluetooth/
 -rw-r--r-- root/root    usr/include/spa-0.2/spa/param/props.h
 -rw-r--r-- root/root    usr/include/spa-0.2/spa/param/route-types.h
 -rw-r--r-- root/root    usr/include/spa-0.2/spa/param/route.h
+-rw-r--r-- root/root    usr/include/spa-0.2/spa/param/tag-types.h
+-rw-r--r-- root/root    usr/include/spa-0.2/spa/param/tag-utils.h
+-rw-r--r-- root/root    usr/include/spa-0.2/spa/param/tag.h
 -rw-r--r-- root/root    usr/include/spa-0.2/spa/param/type-info.h
 drwxr-xr-x root/root    usr/include/spa-0.2/spa/param/video/
 -rw-r--r-- root/root    usr/include/spa-0.2/spa/param/video/chroma.h
@@ -251,6 +254,8 @@ drwxr-xr-x root/root    usr/include/spa-0.2/spa/support/
 -rw-r--r-- root/root    usr/include/spa-0.2/spa/support/thread.h
 drwxr-xr-x root/root    usr/include/spa-0.2/spa/utils/
 -rw-r--r-- root/root    usr/include/spa-0.2/spa/utils/ansi.h
+-rw-r--r-- root/root    usr/include/spa-0.2/spa/utils/atomic.h
+-rw-r--r-- root/root    usr/include/spa-0.2/spa/utils/cleanup.h
 -rw-r--r-- root/root    usr/include/spa-0.2/spa/utils/defs.h
 -rw-r--r-- root/root    usr/include/spa-0.2/spa/utils/dict.h
 -rw-r--r-- root/root    usr/include/spa-0.2/spa/utils/dll.h
@@ -261,6 +266,7 @@ drwxr-xr-x root/root    usr/include/spa-0.2/spa/utils/
 -rw-r--r-- root/root    usr/include/spa-0.2/spa/utils/keys.h
 -rw-r--r-- root/root    usr/include/spa-0.2/spa/utils/list.h
 -rw-r--r-- root/root    usr/include/spa-0.2/spa/utils/names.h
+-rw-r--r-- root/root    usr/include/spa-0.2/spa/utils/ratelimit.h
 -rw-r--r-- root/root    usr/include/spa-0.2/spa/utils/result.h
 -rw-r--r-- root/root    usr/include/spa-0.2/spa/utils/ringbuffer.h
 -rw-r--r-- root/root    usr/include/spa-0.2/spa/utils/string.h
@@ -273,19 +279,19 @@ drwxr-xr-x root/root    usr/lib/alsa-lib/
 drwxr-xr-x root/root    usr/lib/gstreamer-1.0/
 -rwxr-xr-x root/root    usr/lib/gstreamer-1.0/libgstpipewire.so
 lrwxrwxrwx root/root    usr/lib/libpipewire-0.3.so -> libpipewire-0.3.so.0
-lrwxrwxrwx root/root    usr/lib/libpipewire-0.3.so.0 -> libpipewire-0.3.so.0.370.0
--rwxr-xr-x root/root    usr/lib/libpipewire-0.3.so.0.370.0
+lrwxrwxrwx root/root    usr/lib/libpipewire-0.3.so.0 -> libpipewire-0.3.so.0.1000.0
+-rwxr-xr-x root/root    usr/lib/libpipewire-0.3.so.0.1000.0
 drwxr-xr-x root/root    usr/lib/pipewire-0.3/
 drwxr-xr-x root/root    usr/lib/pipewire-0.3/jack/
 lrwxrwxrwx root/root    usr/lib/pipewire-0.3/jack/libjack.so -> libjack.so.0
-lrwxrwxrwx root/root    usr/lib/pipewire-0.3/jack/libjack.so.0 -> libjack.so.0.370.0
--rwxr-xr-x root/root    usr/lib/pipewire-0.3/jack/libjack.so.0.370.0
+lrwxrwxrwx root/root    usr/lib/pipewire-0.3/jack/libjack.so.0 -> libjack.so.0.3.1000
+-rwxr-xr-x root/root    usr/lib/pipewire-0.3/jack/libjack.so.0.3.1000
 lrwxrwxrwx root/root    usr/lib/pipewire-0.3/jack/libjacknet.so -> libjacknet.so.0
-lrwxrwxrwx root/root    usr/lib/pipewire-0.3/jack/libjacknet.so.0 -> libjacknet.so.0.370.0
--rwxr-xr-x root/root    usr/lib/pipewire-0.3/jack/libjacknet.so.0.370.0
+lrwxrwxrwx root/root    usr/lib/pipewire-0.3/jack/libjacknet.so.0 -> libjacknet.so.0.3.1000
+-rwxr-xr-x root/root    usr/lib/pipewire-0.3/jack/libjacknet.so.0.3.1000
 lrwxrwxrwx root/root    usr/lib/pipewire-0.3/jack/libjackserver.so -> libjackserver.so.0
-lrwxrwxrwx root/root    usr/lib/pipewire-0.3/jack/libjackserver.so.0 -> libjackserver.so.0.370.0
--rwxr-xr-x root/root    usr/lib/pipewire-0.3/jack/libjackserver.so.0.370.0
+lrwxrwxrwx root/root    usr/lib/pipewire-0.3/jack/libjackserver.so.0 -> libjackserver.so.0.3.1000
+-rwxr-xr-x root/root    usr/lib/pipewire-0.3/jack/libjackserver.so.0.3.1000
 -rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-access.so
 -rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-adapter.so
 -rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-avb.so
@@ -295,9 +301,13 @@ lrwxrwxrwx root/root    usr/lib/pipewire-0.3/jack/libjackserver.so.0 -> libjacks
 -rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-echo-cancel.so
 -rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-fallback-sink.so
 -rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-filter-chain.so
+-rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-jack-tunnel.so
+-rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-jackdbus-detect.so
 -rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-link-factory.so
 -rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-loopback.so
 -rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-metadata.so
+-rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-netjack2-driver.so
+-rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-netjack2-manager.so
 -rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-pipe-tunnel.so
 -rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-portal.so
 -rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-profiler.so
@@ -316,6 +326,8 @@ lrwxrwxrwx root/root    usr/lib/pipewire-0.3/jack/libjackserver.so.0 -> libjacks
 -rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-spa-device.so
 -rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-spa-node-factory.so
 -rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-spa-node.so
+-rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-vban-recv.so
+-rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-vban-send.so
 -rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-x11-bell.so
 drwxr-xr-x root/root    usr/lib/pipewire-0.3/v4l2/
 -rwxr-xr-x root/root    usr/lib/pipewire-0.3/v4l2/libpw-v4l2.so
@@ -406,6 +418,7 @@ drwxr-xr-x root/root    usr/share/alsa-card-profile/mixer/paths/
 -rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/usb-gaming-headset-output-stereo.conf
 -rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/virtual-surround-7.1.conf
 drwxr-xr-x root/root    usr/share/alsa-card-profile/mixer/profile-sets/
+-rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/9999-custom.conf
 -rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/analog-only.conf
 -rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/asus-xonar-se.conf
 -rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/audigy.conf
@@ -436,23 +449,6 @@ drwxr-xr-x root/root    usr/share/alsa/
 drwxr-xr-x root/root    usr/share/alsa/alsa.conf.d/
 -rw-r--r-- root/root    usr/share/alsa/alsa.conf.d/50-pipewire.conf
 -rw-r--r-- root/root    usr/share/alsa/alsa.conf.d/99-pipewire-default.conf
-drwxr-xr-x root/root    usr/share/man/
-drwxr-xr-x root/root    usr/share/man/man1/
--rw-r--r-- root/root    usr/share/man/man1/pipewire-pulse.1.gz
--rw-r--r-- root/root    usr/share/man/man1/pipewire.1.gz
--rw-r--r-- root/root    usr/share/man/man1/pw-cat.1.gz
--rw-r--r-- root/root    usr/share/man/man1/pw-cli.1.gz
--rw-r--r-- root/root    usr/share/man/man1/pw-config.1.gz
--rw-r--r-- root/root    usr/share/man/man1/pw-dot.1.gz
--rw-r--r-- root/root    usr/share/man/man1/pw-jack.1.gz
--rw-r--r-- root/root    usr/share/man/man1/pw-link.1.gz
--rw-r--r-- root/root    usr/share/man/man1/pw-metadata.1.gz
--rw-r--r-- root/root    usr/share/man/man1/pw-mididump.1.gz
--rw-r--r-- root/root    usr/share/man/man1/pw-mon.1.gz
--rw-r--r-- root/root    usr/share/man/man1/pw-profiler.1.gz
--rw-r--r-- root/root    usr/share/man/man1/pw-top.1.gz
-drwxr-xr-x root/root    usr/share/man/man5/
--rw-r--r-- root/root    usr/share/man/man5/pipewire.conf.5.gz
 drwxr-xr-x root/root    usr/share/pipewire/
 -rw-r--r-- root/root    usr/share/pipewire/client-rt.conf
 drwxr-xr-x root/root    usr/share/pipewire/client-rt.conf.avail/

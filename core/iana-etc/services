@@ -1,4 +1,4 @@
-# /etc/services, created 2023-05-06T20:33:03+0000
+# /etc/services, created 2023-12-04T12:27:00+0000
 # Source: https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xml
 tcpmux              1/tcp
 tcpmux              1/udp
@@ -527,8 +527,6 @@ bhevent           357/tcp
 bhevent           357/udp
 shrinkwrap        358/tcp
 shrinkwrap        358/udp
-nsrmp             359/tcp
-nsrmp             359/udp
 scoi2odialog      360/tcp
 scoi2odialog      360/udp
 semantix          361/tcp
@@ -4070,6 +4068,8 @@ service-ctrl     2367/tcp
 service-ctrl     2367/udp
 opentable        2368/tcp
 opentable        2368/udp
+bif-p2p          2369/tcp
+bif-p2p          2369/udp
 l3-hbmon         2370/tcp
 l3-hbmon         2370/udp
 rda              2371/tcp
@@ -9856,6 +9856,7 @@ senomix07        8058/udp
 senomix08        8059/tcp
 senomix08        8059/udp
 aero             8060/udp
+nikatron-dev     8061/tcp
 toad-bi-appsrvr  8066/tcp
 infi-async       8067/tcp
 ucs-isc          8070/tcp
@@ -10020,6 +10021,7 @@ pcsync-http      8444/tcp
 pcsync-http      8444/udp
 copy             8445/tcp
 copy-disc        8445/udp
+matrix-fed       8448/tcp
 npmp             8450/tcp
 npmp             8450/udp
 nexentamv        8457/tcp
@@ -10060,6 +10062,7 @@ canon-bjnp4      8614/udp
 imink            8615/tcp
 monetra          8665/tcp
 monetra-admin    8666/tcp
+spartan          8668/tcp
 msi-cps-rm       8675/tcp
 msi-cps-rm-disc  8675/udp
 sun-as-jmxrmi    8686/tcp
@@ -10756,6 +10759,7 @@ dsmcc-download  13821/udp
 dsmcc-ccp       13822/tcp
 dsmcc-ccp       13822/udp
 bmdss           13823/tcp
+a-trust-rpc     13832/tcp
 ucontrol        13894/tcp
 ucontrol        13894/udp
 dta-systems     13929/tcp

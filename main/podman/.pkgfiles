@@ -1,8 +1,9 @@
-podman-4.5.0-1
+podman-4.8.2-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/podman
 -rwxr-xr-x root/root    usr/bin/podman-remote
+lrwxrwxrwx root/root    usr/bin/podmansh -> podman
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/tmpfiles.d/
 -rw-r--r-- root/root    usr/lib/tmpfiles.d/podman.conf
@@ -14,6 +15,7 @@ drwxr-xr-x root/root    usr/share/man/man1/
 -rw-r--r-- root/root    usr/share/man/man1/podman-build.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/podman-commit.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/podman-completion.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/podman-compose.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/podman-container-attach.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/podman-container-checkpoint.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/podman-container-cleanup.1.gz
@@ -58,6 +60,11 @@ drwxr-xr-x root/root    usr/share/man/man1/
 -rw-r--r-- root/root    usr/share/man/man1/podman-events.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/podman-exec.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/podman-export.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/podman-farm-create.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/podman-farm-list.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/podman-farm-remove.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/podman-farm-update.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/podman-farm.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/podman-generate-kube.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/podman-generate-spec.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/podman-generate-systemd.1.gz
@@ -218,6 +225,7 @@ drwxr-xr-x root/root    usr/share/man/man1/
 -rw-r--r-- root/root    usr/share/man/man1/podman-volume.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/podman-wait.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/podman.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/podmansh.1.gz
 drwxr-xr-x root/root    usr/share/man/man5/
 -rw-r--r-- root/root    usr/share/man/man5/podman-systemd.unit.5.gz
 -rw-r--r-- root/root    usr/share/man/man5/quadlet.5.gz

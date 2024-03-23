@@ -1,7 +1,8 @@
-5274297b9638eab610c664a9b6b35355  0001-bootstrap-Change-libexec-dir.patch
-30b5a3782f21bac3cdb0c1c164070caa  0001-cargo-Change-libexec-dir.patch
-575a620e604c4945f84d7513b3e6b3d0  0002-compiler-Change-LLVM-targets.patch
-225ea4848113c09a53172a4bc2ff62e9  cargo-1.68.2-x86_64-unknown-linux-gnu.tar.xz
-7e26e6bb33dbe8ed01b67c5036c85ba0  rust-std-1.68.2-x86_64-unknown-linux-gnu.tar.xz
-eb17ba221a343b0fe8a1ebe2a64d821a  rustc-1.68.2-x86_64-unknown-linux-gnu.tar.xz
-2fac6c46422e743f5f05287e89e72f22  rustc-1.69.0-src.tar.xz
+5a0b11e0bc8abe2369f83cde6ea265a9  0001-bootstrap-Change-libexec-dir.patch
+968d7afec16f7693b5e00daaf3871d5b  0002-compiler-Change-LLVM-targets.patch
+d625886fd507b8b69686819d9a4684f4  0004-compiler-Use-wasm-ld-for-wasm-targets.patch
+2afbe7df2d8112064d87ddc4895a09ce  0005-lang-rust-Allow-build-with-LibreSSL-3.8.2.patch
+191fe26848a1fb63c74eaffbc7aeb9f9  cargo-1.74.0-x86_64-unknown-linux-gnu.tar.xz
+227aa6be06af8d5e9fc4b857cb7502db  rust-std-1.74.0-x86_64-unknown-linux-gnu.tar.xz
+df9105c4720f24d1530cfd3d496f81e5  rustc-1.74.0-x86_64-unknown-linux-gnu.tar.xz
+62d794105a8c98923a67e6d9ce032be0  rustc-1.75.0-src.tar.xz

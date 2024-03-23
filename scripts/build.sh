@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 # script to operate Venom Linux through chroot environment
 #
@@ -140,7 +140,7 @@ zap_rootfs() {
 #}
 
 compress_rootfs() {
-	pushd $ROOTFS >/dev/null
+	cd  $ROOTFS
 	
 	[ -f "$TARBALLIMG" ] && {
 		msg "Backup current rootfs..."
@@ -174,7 +174,7 @@ compress_rootfs() {
 			msg "Rootfs compressed: $TARBALLIMG"
 			rm -f "$TARBALLIMG".bak
 		fi
-	popd >/dev/null
+	cd ..
 }
 
 check_rootfs() {
@@ -233,7 +233,11 @@ make_iso() {
 	# prepare isolinux files
 	msg "Preparing isolinux..."
 	rm -fr "$ISODIR"
-	mkdir -p "$ISODIR"/{rootfs,isolinux,efi/boot,boot}
+
+	for d in rootfs isolinux efi/boot boot; do
+		mkdir -p "$ISODIR"/$d
+	done
+
 	for file in $ISOLINUX_FILES; do
 		cp "$ROOTFS/usr/share/syslinux/$file" "$ISODIR/isolinux" || die "Failed copying isolinux file: $file"
 	done
@@ -251,7 +255,13 @@ make_iso() {
 	#copy_ports
 	#chrootrun scratch install -y scratchpkg
 	#sed "s/MAKEFLAGS=.*/MAKEFLAGS=\"-j\$(nproc\)\"/" -i "$ROOTFS"/etc/scratchpkg.conf
-	
+
+	# initramfs with liveiso.hook
+	! [ -f "$ROOTFS/etc/mkinitramfs.d/liveiso.hook" ] && \
+		cp "$ROOTFS/usr/share/mkinitramfs/hooks/liveiso.hook" "$ROOTFS/etc/mkinitramfs.d/"
+	kernver=$(cat $ROOTFS/lib/modules/KERNELVERSION)
+	chrootrun mkinitramfs -k $kernver -a liveiso -o /boot/initrd-venom.img || die "Failed create initramfs"
+
 	# make sfs
 	msg "Squashing root filesystem: $ISODIR/rootfs/filesystem.sfs ..."
 	mksquashfs "$ROOTFS" "$ISODIR/rootfs/filesystem.sfs" \
@@ -264,13 +274,10 @@ make_iso() {
 			-e "*.spkgnew" 2>/dev/null || die "Failed create sfs root filesystem"
 			
 	cp "$ROOTFS/boot/vmlinuz-venom" "$ISODIR/boot/vmlinuz" || die "Failed copying kernel"
-	
-	kernver=$(file $ROOTFS/boot/vmlinuz-venom | cut -d ' ' -f9)
-	chrootrun mkinitramfs -k $kernver -a liveiso || die "Failed create initramfs"
 	cp "$ROOTFS/boot/initrd-venom.img" "$ISODIR/boot/initrd" || die "Failed copying initrd"
 	
 	msg "Setup UEFI mode..."
-	mkdir -p "$ISODIR"/boot/grub/{fonts,x86_64-efi}
+	mkdir -p "$ISODIR"/boot/grub/fonts "$ISODIR"/boot/grub/x86_64-efi
 	if [ -f $ROOTFS/usr/share/grub/unicode.pf2 ];then
 		cp "$ROOTFS/usr/share/grub/unicode.pf2" "$ISODIR/boot/grub/fonts"
 	fi
@@ -278,7 +285,7 @@ make_iso() {
 		cp "$ISODIR/isolinux/splash.png" "$ISODIR/boot/grub/"
 	fi
 	echo "set prefix=/boot/grub" > "$ISODIR/boot/grub-early.cfg"
-	cp -a $ROOTFS/usr/lib/grub/x86_64-efi/*.{mod,lst} "$ISODIR/boot/grub/x86_64-efi" || die "Failed copying efi files"
+	cp -a $ROOTFS/usr/lib/grub/x86_64-efi/*.mod  $ROOTFS/usr/lib/grub/x86_64-efi/*.lst "$ISODIR/boot/grub/x86_64-efi" || die "Failed copying efi files"
 	#sed "s/Venom Linux/Venom Linux $RELEASE/g" "$ROOTFS/usr/share/grub/grub.cfg" > "$ISODIR/boot/grub/grub.cfg"
 	cat "$ROOTFS/usr/share/grub/grub.cfg" > "$ISODIR/boot/grub/grub.cfg"
 
@@ -312,7 +319,7 @@ make_iso() {
 	msg "Cleaning iso directory: $ISODIR"
 	rm -fr "$ISODIR"
 	cd $(dirname $(realpath "$OUTPUTISO"))
-		sha256sum $(basename $(realpath "$OUTPUTISO")) > $(basename $(realpath "$OUTPUTISO")).sha256sum
+		sha512sum $(basename $(realpath "$OUTPUTISO")) > $(basename $(realpath "$OUTPUTISO")).sha512sum
 	cd - >/dev/null
 	msg "Making iso completed: $OUTPUTISO ($(ls -lh $OUTPUTISO | awk '{print $5}'))"
 }
@@ -490,7 +497,7 @@ SCRIPTDIR="$(dirname $(realpath $0))"
 parse_opts "$@"
 
 ARCH=$(uname -m)
-RELEASE=20230510
+RELEASE=20231216
 
 TARBALLIMG="$PORTSDIR/venomlinux-rootfs-$ARCH.tar.xz"
 SRCDIR="${SRCDIR:-/var/cache/scratchpkg/sources}"
@@ -503,7 +510,7 @@ REPO="core main multilib nonfree testing"
 
 # iso
 ISODIR="${ISODIR:-/tmp/venomiso}"
-ISO_PKG="linux-lts,squashfs-tools,grub-efi,btrfs-progs,reiserfsprogs,xfsprogs,syslinux"
+ISO_PKG="linux,squashfs-tools,grub-efi,btrfs-progs,xfsprogs,syslinux"
 OUTPUTISO="${OUTPUTISO:-$PORTSDIR/venomlinux-$(date +%Y%m%d)-$ARCH.iso}"
 
 trap "interrupted" 1 2 3 15

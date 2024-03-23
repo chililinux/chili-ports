@@ -2,8 +2,8 @@
 # depends	: ca-certificates openssl zlib
 
 name=curl
-version=8.0.1
-release=1
+version=8.5.0
+release=2
 source="https://curl.haxx.se/download/$name-$version.tar.xz"
 
 build() {
@@ -12,6 +12,8 @@ build() {
 	./configure \
 		--prefix=/usr \
 		--disable-static \
+		--disable-ldap \
+		--disable-ldaps \
 		--enable-threaded-resolver \
 		--with-ca-bundle=/etc/ssl/certs/ca-certificates.crt \
 		--with-openssl \

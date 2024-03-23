@@ -2,12 +2,11 @@
 # depends	: cronie libgee vte3 gtk3 vala json-glib rsync
 
 name=timeshift
-version=22.06.6
+version=23.12.2
 release=1
-source="$name-$version.tar.gz::https://github.com/teejee2008/timeshift/archive/refs/tags/$version.tar.gz"
+source="$name-$version.tar.gz::https://github.com/linuxmint/timeshift/archive/refs/tags/$version.tar.gz"
 
 build() {
-	cd $name-$version
 
 	cat > which <<EOF
 #!/bin/sh
@@ -17,9 +16,8 @@ EOF
 chmod +x which
 export PATH=$PATH:$PWD
 
-	export CFLAGS="${CFLAGS} --std=c99"
-
-	make all
-	make DESTDIR=$PKG install
-
+	venom-meson $name-$version build \
+	-D xapp=false 
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
 }

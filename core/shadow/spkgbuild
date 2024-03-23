@@ -1,8 +1,9 @@
 # description	: Programs for handling passwords in a secure way
+# homepage	: https://github.com/shadow-maint/shadow
 # depends	: acl
 
 name=shadow
-version=4.13
+version=4.14.2
 release=1
 source="https://github.com/shadow-maint/$name/releases/download/$version/$name-$version.tar.xz
 	pwck"
@@ -15,10 +16,17 @@ build() {
 	find man -name Makefile.in -exec sed -i 's/getspnam\.3 / /' {} \;
 	find man -name Makefile.in -exec sed -i 's/passwd\.5 / /'   {} \;
 
-	sed -i -e 's@#ENCRYPT_METHOD DES@ENCRYPT_METHOD SHA512@' etc/login.defs
+	sed -i -e 's@#ENCRYPT_METHOD DES@ENCRYPT_METHOD YESCRYPT@' etc/login.defs
 
 	./configure \
+		--prefix=/usr \
 		--sysconfdir=/etc \
+		--disable-logind \
+		--disable-nsl \
+		--disable-static \
+		--enable-lastlog \
+		--with-yescrypt \
+		--without-libbsd \
 		--without-libpam \
 		--with-group-name-max-length=32 
 

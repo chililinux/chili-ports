@@ -1,4 +1,4 @@
-dropbox-172.4.7555-1
+dropbox-186.4.6207-1
 drwxr-xr-x root/root    opt/
 drwxr-xr-x root/root    opt/dropbox/
 -rw-r--r-- root/root    opt/dropbox/ACKNOWLEDGEMENTS
@@ -10,6 +10,7 @@ drwxr-xr-x root/root    opt/dropbox/
 -rw-r--r-- root/root    opt/dropbox/PyQt5.QtQml.so
 -rw-r--r-- root/root    opt/dropbox/PyQt5.QtQuick.so
 -rw-r--r-- root/root    opt/dropbox/PyQt5.QtWidgets.so
+-rw-r--r-- root/root    opt/dropbox/PyQt5.sip.so
 -rw-r--r-- root/root    opt/dropbox/README
 -rw-r--r-- root/root    opt/dropbox/VERSION
 -rw-r--r-- root/root    opt/dropbox/_cffi_backend.cpython-38-x86_64-linux-gnu.so
@@ -26,20 +27,23 @@ drwxr-xr-x root/root    opt/dropbox/
 drwxr-xr-x root/root    opt/dropbox/helpers/
 drwxr-xr-x root/root    opt/dropbox/images/
 drwxr-xr-x root/root    opt/dropbox/images/emblems/
--rw-r--r-- root/root    opt/dropbox/images/emblems/emblem-dropbox-app.icon
--rw-r--r-- root/root    opt/dropbox/images/emblems/emblem-dropbox-app.svg
--rw-r--r-- root/root    opt/dropbox/images/emblems/emblem-dropbox-infinite.icon
--rw-r--r-- root/root    opt/dropbox/images/emblems/emblem-dropbox-infinite.png
--rw-r--r-- root/root    opt/dropbox/images/emblems/emblem-dropbox-mixedstate.icon
--rw-r--r-- root/root    opt/dropbox/images/emblems/emblem-dropbox-mixedstate.png
--rw-r--r-- root/root    opt/dropbox/images/emblems/emblem-dropbox-selsync.icon
--rw-r--r-- root/root    opt/dropbox/images/emblems/emblem-dropbox-selsync.png
--rw-r--r-- root/root    opt/dropbox/images/emblems/emblem-dropbox-syncing.icon
--rw-r--r-- root/root    opt/dropbox/images/emblems/emblem-dropbox-syncing.png
--rw-r--r-- root/root    opt/dropbox/images/emblems/emblem-dropbox-unsyncable.icon
--rw-r--r-- root/root    opt/dropbox/images/emblems/emblem-dropbox-unsyncable.png
--rw-r--r-- root/root    opt/dropbox/images/emblems/emblem-dropbox-uptodate.icon
--rw-r--r-- root/root    opt/dropbox/images/emblems/emblem-dropbox-uptodate.png
+drwxr-xr-x root/root    opt/dropbox/images/emblems/hicolor/
+drwxr-xr-x root/root    opt/dropbox/images/emblems/hicolor/64x64/
+drwxr-xr-x root/root    opt/dropbox/images/emblems/hicolor/64x64/emblems/
+-rw-r--r-- root/root    opt/dropbox/images/emblems/hicolor/64x64/emblems/emblem-dropbox-app.icon
+-rw-r--r-- root/root    opt/dropbox/images/emblems/hicolor/64x64/emblems/emblem-dropbox-app.svg
+-rw-r--r-- root/root    opt/dropbox/images/emblems/hicolor/64x64/emblems/emblem-dropbox-infinite.icon
+-rw-r--r-- root/root    opt/dropbox/images/emblems/hicolor/64x64/emblems/emblem-dropbox-infinite.png
+-rw-r--r-- root/root    opt/dropbox/images/emblems/hicolor/64x64/emblems/emblem-dropbox-mixedstate.icon
+-rw-r--r-- root/root    opt/dropbox/images/emblems/hicolor/64x64/emblems/emblem-dropbox-mixedstate.png
+-rw-r--r-- root/root    opt/dropbox/images/emblems/hicolor/64x64/emblems/emblem-dropbox-selsync.icon
+-rw-r--r-- root/root    opt/dropbox/images/emblems/hicolor/64x64/emblems/emblem-dropbox-selsync.png
+-rw-r--r-- root/root    opt/dropbox/images/emblems/hicolor/64x64/emblems/emblem-dropbox-syncing.icon
+-rw-r--r-- root/root    opt/dropbox/images/emblems/hicolor/64x64/emblems/emblem-dropbox-syncing.png
+-rw-r--r-- root/root    opt/dropbox/images/emblems/hicolor/64x64/emblems/emblem-dropbox-unsyncable.icon
+-rw-r--r-- root/root    opt/dropbox/images/emblems/hicolor/64x64/emblems/emblem-dropbox-unsyncable.png
+-rw-r--r-- root/root    opt/dropbox/images/emblems/hicolor/64x64/emblems/emblem-dropbox-uptodate.icon
+-rw-r--r-- root/root    opt/dropbox/images/emblems/hicolor/64x64/emblems/emblem-dropbox-uptodate.png
 drwxr-xr-x root/root    opt/dropbox/images/hicolor/
 drwxr-xr-x root/root    opt/dropbox/images/hicolor/16x16/
 drwxr-xr-x root/root    opt/dropbox/images/hicolor/16x16/status/
@@ -95,7 +99,6 @@ drwxr-xr-x root/root    opt/dropbox/plugins/platforms/
 drwxr-xr-x root/root    opt/dropbox/resources/
 -rw-r--r-- root/root    opt/dropbox/resources/resources_images.rcc
 -rw-r--r-- root/root    opt/dropbox/resources/resources_qml.rcc
--rw-r--r-- root/root    opt/dropbox/sip.so
 -rw-r--r-- root/root    opt/dropbox/tornado.speedups.cpython-38-x86_64-linux-gnu.so
 -rw-r--r-- root/root    opt/dropbox/tprt.cpython-38-x86_64-linux-gnu.so
 -rw-r--r-- root/root    opt/dropbox/wmctrl

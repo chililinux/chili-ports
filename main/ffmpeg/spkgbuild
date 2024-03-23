@@ -2,10 +2,11 @@
 # depends	: libass fdk-aac freetype2 lame gnutls libtheora libvorbis libvpx opus x264 x265 alsa-lib sdl2 yasm aom dav1d
 
 name=ffmpeg
-version=6.0
-release=2
+version=6.1
+release=1
 source="https://ffmpeg.org/releases/$name-$version.tar.xz
-	ffmpeg-${version}-chromium_method-1.patch::https://www.linuxfromscratch.org/patches/blfs/svn/ffmpeg-6.0-chromium_method-1.patch
+	ffmpeg-${version}-chromium_method-1.patch::https://linuxfromscratch.org/patches/downloads/ffmpeg/ffmpeg-${version}-chromium_method-1.patch
+	
 	ffmpeg-x264-10bit.sh"
 
 build() {
@@ -30,7 +31,6 @@ build() {
 	addopt nv-codec-headers nvenc
 	addopt amf-headers amf
 	addopt svt-av1 libsvtav1
-
 	
 	# Adds an API necessary for some packages to build
 	patch -Np1 -i $SRC/ffmpeg-${version}-chromium_method-1.patch
@@ -51,6 +51,7 @@ build() {
 		    --disable-libcelt    \
 		    --disable-optimizations \
 		    --disable-stripping  \
+		    --disable-doc  \
 		    --enable-swresample  \
 		    --enable-avfilter    \
 		    --enable-pic         \
@@ -78,4 +79,6 @@ build() {
 	[ -e '/usr/lib/pkgconfig/x264.pc' ] && \
 		install -m 0755 -D $SRC/ffmpeg-x264-10bit.sh \
 			$PKG/usr/bin/ffmpeg-x264-10bit
+
+	rm -r $PKG/usr/share/ffmpeg/examples
 }

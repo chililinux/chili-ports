@@ -1,2 +1,3 @@
-dea2af9e61d208e06358bd713c30e8bd  qt-everywhere-opensource-src-5.15.9-kf5-1.patch
-b748aec1cb8ca0610859e5f63707ad67  qt5-5.15.9.tar.xz
+00684445d97a2d82430bc9b3c14d1eee  qt-everywhere-opensource-src-5.15.11-kf5-1.patch
+1e3acfb0a99137568bd7756a0bfdaef7  qt-xkbcommon160.patch
+37b79a3764b0c9157fa3686df209b25a  qt5-5.15.11.tar.xz

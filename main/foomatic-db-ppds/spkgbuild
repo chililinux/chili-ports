@@ -1,0 +1,25 @@
+# description	: Foomatic - PPDs from printer manufacturers
+# homepage	: http://www.linuxprinting.org/foomatic.html
+# depends	: foomatic-db
+
+name=foomatic-db-ppds
+version=20230902
+release=1
+commit=4e6ab90da63afddee33d80115acb44149d2d292b
+source="${name%-*}-$version.tar.gz::https://github.com/OpenPrinting/foomatic-db/archive/4e6ab90da63afddee33d80115acb44149d2d292b.tar.gz"
+
+build(){
+	cd ${name%-*}-$commit
+
+	./make_configure
+	./configure --prefix=/usr
+	make DESTDIR=$PKG install
+   
+	# remove files from foomatic-db
+	rm -rf $PKG/usr/share/foomatic/db/oldprinterids
+	rm -rf $PKG/usr/share/foomatic/db/source/driver
+	rm -rf $PKG/usr/share/foomatic/db/source/opt
+	rm -rf $PKG/usr/share/foomatic/db/source/printer
+	rm -rf $PKG/usr/share/foomatic/xmlschema
+	rm -f  $PKG/usr/share/foomatic/db/source/PPD/Kyocera/ReadMe.htm
+}

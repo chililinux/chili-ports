@@ -1,20 +1,21 @@
 # description	: OpenGL compatible 3D graphics library
-# depends	: python3-mako elfutils bison flex libxext libxdamage libxshmfence libxxf86vm libxrandr libdrm libglvnd glslang llvm
+# depends	: llvm python3-mako elfutils bison flex libxext libxdamage libxshmfence libxxf86vm libxrandr libdrm libglvnd glslang 
 # optional	: libva libvdpau wayland-protocols
 
 name=mesa
-version=23.1.0
+version=23.3.2
 release=1
 source="https://mesa.freedesktop.org/archive/$name-$version.tar.xz"
 
 build() {
+	cd $name-$version
 
 	scratch isinstalled vulkan-icd-loader && OPT_MESA_GALLIUM='zink,'
 	scratch isinstalled libvdpau && OPT_MESA_VDPAU='-D gallium-vdpau=enabled' || OPT_MESA_VDPAU='-D gallium-vdpau=disabled'
 	scratch isinstalled libva && OPT_MESA_VAAPI='-D gallium-va=enabled' || OPT_MESA_VAAPI='-D gallium-va=disabled'
 	scratch isinstalled wayland-protocols && OPT_MESA_PLATFORMS='wayland,x11' || OPT_MESA_PLATFORMS='x11'
 
-	venom-meson $name-$version build \
+	venom-meson build \
 		-D dri3=enabled \
 		-D egl=enabled \
 		-D llvm=enabled \

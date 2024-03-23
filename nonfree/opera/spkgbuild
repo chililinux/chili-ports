@@ -2,9 +2,11 @@
 # depends	: curl desktop-file-utils gtk3 hicolor-icon-theme nss shared-mime-info alsa-lib cups
 
 name=opera
-version=98.0.4759.6
+version=106.0.4998.19
 release=1
-source="$name-$version.deb::https://download3.operacdn.com/pub/opera/desktop/${version}/linux/${name}-stable_${version}_amd64.deb"
+ffmpeg_ver=0.82.0
+source="$name-$version.deb::https://download3.operacdn.com/pub/opera/desktop/${version}/linux/${name}-stable_${version}_amd64.deb
+https://github.com/nwjs-ffmpeg-prebuilt/nwjs-ffmpeg-prebuilt/releases/download/$ffmpeg_ver/$ffmpeg_ver-linux-x64.zip"
 
 build() {
 	bsdtar -xf ${name}-${version}.deb
@@ -16,4 +18,7 @@ build() {
 	rm -r $PKG/usr/lib/*-linux-gnu
 
 	ln -sf /usr/lib/opera/opera $PKG/usr/bin/opera
+
+	# support propietary codecs
+	install -Dm644 $SRC/libffmpeg.so -t $PKG/usr/lib/opera/
 }

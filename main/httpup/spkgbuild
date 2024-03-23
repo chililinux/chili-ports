@@ -2,11 +2,12 @@
 # depends	: curl
 
 name=httpup
-version=0.5.0
-release=1
+version=0.5.1
+release=2
 source="https://crux.nu/files/$name-$version.tar.xz"
 
 build() {
+	export CPPFLAGS="-Wno-error=mismatched-new-delete"
 	cd $name-$version
 	sed -i 's/Updating collection/Updating repository/' httpup.cpp
 	make
