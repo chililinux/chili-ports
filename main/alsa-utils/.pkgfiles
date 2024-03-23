@@ -1,12 +1,7 @@
-alsa-utils-1.2.9-2
+alsa-utils-1.2.10-2
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/rc.d/
 -rwxr-xr-x root/root    etc/rc.d/alsa
-drwxr-xr-x root/root    etc/sv/
-drwxr-xr-x root/root    etc/sv/alsa/
--rwxr-xr-x root/root    etc/sv/alsa/finish
--rwxr-xr-x root/root    etc/sv/alsa/run
-lrwxrwxrwx root/root    etc/sv/alsa/supervise -> /run/runit/supervise.alsa
 drwxr-xr-x root/root    lib/
 drwxr-xr-x root/root    lib/udev/
 drwxr-xr-x root/root    lib/udev/rules.d/
@@ -28,6 +23,7 @@ lrwxrwxrwx root/root    usr/bin/arecord -> aplay
 -rwxr-xr-x root/root    usr/bin/aseqnet
 -rwxr-xr-x root/root    usr/bin/axfer
 -rwxr-xr-x root/root    usr/bin/iecset
+-rwxr-xr-x root/root    usr/bin/nhlt-dmic-info
 -rwxr-xr-x root/root    usr/bin/speaker-test
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/alsa-topology/
@@ -52,6 +48,8 @@ drwxr-xr-x root/root    usr/share/man/man1/
 -rw-r--r-- root/root    usr/share/man/man1/alsactl.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/alsaloop.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/alsamixer.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/alsatplg.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/alsaucm.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/amidi.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/amixer.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/aplay.1.gz
@@ -64,6 +62,7 @@ lrwxrwxrwx root/root    usr/share/man/man1/arecord.1.gz -> aplay.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/axfer-transfer.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/axfer.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/iecset.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/nhlt-dmic-info.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/speaker-test.1.gz
 drwxr-xr-x root/root    usr/share/man/man7/
 drwxr-xr-x root/root    usr/share/sounds/

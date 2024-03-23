@@ -1,4 +1,4 @@
-papirus-icon-theme-dark-20230301-1
+papirus-icon-theme-dark-20231201-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/icons/
@@ -359,6 +359,7 @@ lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/actions/draw-arrow-do
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/actions/draw-arrow-forward.svg -> ./go-next.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/actions/draw-arrow-up.svg -> ./go-up.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/actions/draw-bezier-curves.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/actions/draw-booleans.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/actions/draw-brush.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/actions/draw-calligraphic.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/actions/draw-circle.svg
@@ -489,7 +490,6 @@ lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/actions/entry-clone.s
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/actions/entry-delete.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/actions/entry-edit.svg -> edit.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/actions/entry-new.svg
-lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/actions/epiphany-download.svg -> document-save.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/actions/equalizer.svg -> view-media-equalizer.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/actions/error.svg -> action-unavailable.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/actions/escape-direction-all.svg
@@ -2013,6 +2013,7 @@ lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/actions/view-calendar
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/actions/view-calendar-week.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/actions/view-calendar-whatsnext.svg -> view-calendar-journal.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/actions/view-calendar-workweek.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/actions/view-calendar-year.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/actions/view-calendar.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/actions/view-catalog.svg -> view-pim-news.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/actions/view-categories.svg -> view-list-details.svg
@@ -2313,7 +2314,18 @@ drwxr-xr-x root/root    usr/share/icons/Papirus-Dark/16x16/devices/
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/devices/audio-headphones.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/devices/audio-headset.svg -> audio-headphones.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/devices/audio-input-microphone.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/devices/audio-speaker-center-back.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/devices/audio-speaker-center.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/devices/audio-speaker-front-left-of-center.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/devices/audio-speaker-front-right-of-center.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/devices/audio-speaker-left-back.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/devices/audio-speaker-left-side.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/devices/audio-speaker-left.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/devices/audio-speaker-right-back.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/devices/audio-speaker-right-side.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/devices/audio-speaker-right.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/devices/audio-speakers.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/devices/audio-subwoofer.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/devices/battery.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/devices/blockdevice.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/devices/blueman-camera.svg -> camera-photo.svg
@@ -2388,7 +2400,6 @@ lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/devices/gnome-dev-rem
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/devices/gnome-dev-removable-usb.svg -> drive-removable-media.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/devices/gnome-dev-removable.svg -> drive-removable-media.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/devices/gnome-dev-wavelan.svg -> network-wireless.svg
-lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/devices/gnome-fs-blockdev.svg -> drive-harddisk.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/devices/gnome-phone-manager.svg -> phone.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/devices/hifi.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/devices/i-network-printer.svg -> printer-network.svg
@@ -2512,14 +2523,13 @@ lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-camera.
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-cd.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-cloud.svg -> folder-mail-cloud.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-code.svg
--rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-copy-cloud.svg
--rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-custom.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-cyan.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-darkcyan.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-decrypted.svg -> folder-unlocked.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-deeporange.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-desktop.svg -> user-desktop.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-development.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-docker.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-documents-open.svg -> folder-open.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-documents.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-download-open.svg -> folder-open.svg
@@ -2559,6 +2569,8 @@ lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-music-o
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-network.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-nextcloud.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-nordic.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-notes.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-obsidian.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-onedrive.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-open.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-orange.svg
@@ -2589,6 +2601,7 @@ lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-sound.s
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-steam.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-sync.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-syncthing.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-systemd.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-tar.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-teal.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/folder-temp.svg -> folder-recent.svg
@@ -2620,14 +2633,6 @@ lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/folder_open.sv
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/folder_wordprocessing.svg -> folder-documents.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/gnome-dev-trash-empty.svg -> user-trash.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/gnome-dev-trash-full.svg -> user-trash-full.svg
-lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/gnome-fs-bookmark-missing.svg -> bookmark-missing.svg
-lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/gnome-fs-bookmark.svg -> user-bookmarks.svg
-lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/gnome-fs-directory-accept.svg -> folder-open.svg
-lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/gnome-fs-directory.svg -> folder.svg
-lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/gnome-fs-home.svg -> user-home.svg
-lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/gnome-fs-trash-empty-accept.svg -> user-trash-full.svg
-lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/gnome-fs-trash-empty.svg -> user-trash.svg
-lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/gnome-fs-trash-full.svg -> user-trash-full.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/gnome-home.svg -> user-home.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/gnome-stock-trash-empty.svg -> user-trash.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/16x16/places/gnome-stock-trash-full.svg -> user-trash-full.svg
@@ -2687,6 +2692,7 @@ lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/18x18/actions/dialog-align-
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/18x18/actions/document-print.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/18x18/actions/document-properties.svg -> format-justify-fill.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/18x18/actions/document-save.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/18x18/actions/draw-booleans.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/18x18/actions/draw-calligraphic.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/18x18/actions/draw-connector.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/18x18/actions/draw-cuboid.svg
@@ -3222,6 +3228,7 @@ lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/22x22/actions/draw-arrow-do
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/22x22/actions/draw-arrow-forward.svg -> ./go-next.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/22x22/actions/draw-arrow-up.svg -> ./go-up.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/22x22/actions/draw-bezier-curves.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/22x22/actions/draw-booleans.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/22x22/actions/draw-brush.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/22x22/actions/draw-calligraphic.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/22x22/actions/draw-circle.svg
@@ -3335,7 +3342,6 @@ lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/22x22/actions/entry-clone.s
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/22x22/actions/entry-delete.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/22x22/actions/entry-edit.svg -> edit.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/22x22/actions/entry-new.svg
-lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/22x22/actions/epiphany-download.svg -> document-save.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/22x22/actions/equalizer.svg -> view-media-equalizer.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/22x22/actions/error.svg -> action-unavailable.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/22x22/actions/escape-direction-all.svg
@@ -4799,6 +4805,7 @@ lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/22x22/actions/view-calendar
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/22x22/actions/view-calendar-week.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/22x22/actions/view-calendar-whatsnext.svg -> view-calendar-journal.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/22x22/actions/view-calendar-workweek.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/22x22/actions/view-calendar-year.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/22x22/actions/view-calendar.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/22x22/actions/view-catalog.svg -> view-pim-news.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/22x22/actions/view-categories.svg -> view-list-details.svg
@@ -5436,6 +5443,7 @@ lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/24x24/actions/draw-arrow-do
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/24x24/actions/draw-arrow-forward.svg -> ./go-next.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/24x24/actions/draw-arrow-up.svg -> ./go-up.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/24x24/actions/draw-bezier-curves.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/24x24/actions/draw-booleans.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/24x24/actions/draw-brush.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/24x24/actions/draw-calligraphic.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/24x24/actions/draw-circle.svg
@@ -5566,7 +5574,6 @@ lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/24x24/actions/entry-clone.s
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/24x24/actions/entry-delete.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/24x24/actions/entry-edit.svg -> edit.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/24x24/actions/entry-new.svg
-lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/24x24/actions/epiphany-download.svg -> document-save.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/24x24/actions/equalizer.svg -> view-media-equalizer.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/24x24/actions/error.svg -> action-unavailable.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/24x24/actions/escape-direction-all.svg
@@ -7071,6 +7078,7 @@ lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/24x24/actions/view-calendar
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/24x24/actions/view-calendar-week.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/24x24/actions/view-calendar-whatsnext.svg -> view-calendar-journal.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/24x24/actions/view-calendar-workweek.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/24x24/actions/view-calendar-year.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/24x24/actions/view-calendar.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/24x24/actions/view-catalog.svg -> view-pim-news.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/24x24/actions/view-categories.svg -> view-list-details.svg
@@ -7727,10 +7735,11 @@ lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/symbolic/apps/application-d
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/symbolic/apps/cheese-symbolic.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/symbolic/apps/chromium-browser-symbolic.svg -> google-chrome-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/symbolic/apps/clock-applet-symbolic.svg
--rw-r--r-- root/root    usr/share/icons/Papirus-Dark/symbolic/apps/com.github.bilelmoussaoui.Authenticator-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/symbolic/apps/com.bilelmoussaoui.Authenticator-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/symbolic/apps/com.github.taiko2k.avvie-symbolic.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/symbolic/apps/com.github.taiko2k.tauonmb-symbolic.svg -> tauonmb-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/symbolic/apps/deja-dup-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/symbolic/apps/dev.vlinkz.NixSoftwareCenter-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/symbolic/apps/dino-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/symbolic/apps/dropbox-symbolic.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/symbolic/apps/eog-symbolic.svg -> multimedia-photo-viewer-symbolic.svg
@@ -7778,6 +7787,7 @@ lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/symbolic/apps/org.gnome.Cal
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/symbolic/apps/org.gnome.Calendar-symbolic.svg -> office-calendar-symbolic.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/symbolic/apps/org.gnome.Characters-symbolic.svg -> accessories-character-map-symbolic.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/symbolic/apps/org.gnome.Cheese-symbolic.svg -> cheese-symbolic.svg
+lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/symbolic/apps/org.gnome.Console-symbolic.svg -> org.gnome.Terminal-symbolic.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/symbolic/apps/org.gnome.Contacts-symbolic.svg -> ../categories/preferences-desktop-online-accounts-symbolic.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/symbolic/apps/org.gnome.Evince-symbolic.svg -> evince-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/symbolic/apps/org.gnome.Fractal-symbolic.svg
@@ -7819,7 +7829,7 @@ lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/symbolic/apps/org.gnome.Set
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/symbolic/apps/org.gnome.Settings-wacom-symbolic.svg -> ../devices/input-tablet-symbolic.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/symbolic/apps/org.gnome.Software-symbolic.svg -> gnome-software-symbolic.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/symbolic/apps/org.gnome.SystemMonitor-symbolic.svg -> utilities-system-monitor-symbolic.svg
-lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/symbolic/apps/org.gnome.Terminal-symbolic.svg -> utilities-terminal-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/symbolic/apps/org.gnome.Terminal-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/symbolic/apps/org.gnome.Yelp-symbolic.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/symbolic/apps/org.gnome.clocks-symbolic.svg -> clock-applet-symbolic.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/symbolic/apps/org.gnome.eog-symbolic.svg -> multimedia-photo-viewer-symbolic.svg
@@ -7853,6 +7863,7 @@ lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/symbolic/apps/preferences-d
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/symbolic/apps/preferences-ubuntu-panel-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/symbolic/apps/revolt-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/symbolic/apps/rhythmbox-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/Papirus-Dark/symbolic/apps/screenshooter-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/symbolic/apps/separator-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Papirus-Dark/symbolic/apps/setroubleshoot_icon-symbolic.svg
 lrwxrwxrwx root/root    usr/share/icons/Papirus-Dark/symbolic/apps/shotwell-symbolic.svg -> multimedia-photo-manager-symbolic.svg

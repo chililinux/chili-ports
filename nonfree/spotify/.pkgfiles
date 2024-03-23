@@ -1,10 +1,10 @@
-spotify-1.2.8.923.g4f94bf0d-1
+spotify-1.2.26.1187-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 lrwxrwxrwx root/root    usr/bin/spotify -> ../share/spotify/spotify
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/applications/
--rwxr-xr-x root/root    usr/share/applications/spotify.desktop
+-rw-r--r-- root/root    usr/share/applications/spotify.desktop
 drwxr-xr-x root/root    usr/share/icons/
 drwxr-xr-x root/root    usr/share/icons/hicolor/
 drwxr-xr-x root/root    usr/share/icons/hicolor/128x128/
@@ -32,7 +32,7 @@ drwxr-xr-x root/root    usr/share/icons/hicolor/64x64/
 drwxr-xr-x root/root    usr/share/icons/hicolor/64x64/apps/
 -rwxr-xr-x root/root    usr/share/icons/hicolor/64x64/apps/spotify.png
 drwxr-xr-x root/root    usr/share/pixmaps/
--rwxr-xr-x root/root    usr/share/pixmaps/spotify-client.png
+-rw-r--r-- root/root    usr/share/pixmaps/spotify-client.png
 drwxr-xr-x root/root    usr/share/spotify/
 drwxr-xr-x root/root    usr/share/spotify/Apps/
 -rw-r--r-- root/root    usr/share/spotify/Apps/login.spa
@@ -40,6 +40,7 @@ drwxr-xr-x root/root    usr/share/spotify/Apps/
 drwxr-xr-x root/root    usr/share/spotify/apt-keys/
 -rw-r--r-- root/root    usr/share/spotify/apt-keys/spotify-2021-10-27-5E3C45D7B312C643.gpg
 -rw-r--r-- root/root    usr/share/spotify/apt-keys/spotify-2022-11-14-7A3A762FAFD4A51F.gpg
+-rw-r--r-- root/root    usr/share/spotify/apt-keys/spotify-2023-11-16-6224F9941A8AA6D1.gpg
 -rw-rw-r-- root/root    usr/share/spotify/chrome_100_percent.pak
 -rw-rw-r-- root/root    usr/share/spotify/chrome_200_percent.pak
 drwxr-xr-x root/root    usr/share/spotify/icons/

@@ -1,8 +1,8 @@
 # description	: Server and user space API to deal with multimedia
-# depends	: meson alsa-lib gstreamer ffmpeg dbus gst-plugins-base bluez sbc jack wireplumber
+# depends	: meson alsa-lib gstreamer ffmpeg dbus gst-plugins-base bluez sbc jack
 
 name=pipewire
-version=0.3.70
+version=1.0.0
 release=1
 source="https://github.com/PipeWire/pipewire/archive/$version/$name-$version.tar.gz
 	venom-pipewire-launcher

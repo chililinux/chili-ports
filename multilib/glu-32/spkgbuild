@@ -2,20 +2,19 @@
 # depends	: glu mesa-32
 
 name=glu-32
-version=9.0.2
-release=1
+version=9.0.3
+release=2
 source="ftp://ftp.freedesktop.org/pub/mesa/glu/glu-$version.tar.xz"
 
 build() {
-	cd glu-$version
-
 	export CC="gcc -m32"
 	export CXX="g++ -m32"
 	export PKG_CONFIG_LIBDIR="/usr/lib32/pkgconfig"
 
-	./configure --prefix=/usr --libdir=/usr/lib32 --disable-static
-	make
-	make DESTDIR=$PKG install
+	venom-meson ${name%-*}-$version build \
+		--libdir=/usr/lib32 
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
 
-	rm -fr $PKG/usr/include/
+	rm -rf $PKG/usr/include
 }

@@ -1,4 +1,4 @@
-man-pages-6.04-1
+man-pages-6.05.01-2
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/man/
@@ -192,6 +192,7 @@ drwxr-xr-x root/root    usr/share/man/man2/
 -rw-r--r-- root/root    usr/share/man/man2/ioctl_getfsmap.2.gz
 -rw-r--r-- root/root    usr/share/man/man2/ioctl_iflags.2.gz
 -rw-r--r-- root/root    usr/share/man/man2/ioctl_ns.2.gz
+-rw-r--r-- root/root    usr/share/man/man2/ioctl_pipe.2.gz
 -rw-r--r-- root/root    usr/share/man/man2/ioctl_tty.2.gz
 -rw-r--r-- root/root    usr/share/man/man2/ioctl_userfaultfd.2.gz
 -rw-r--r-- root/root    usr/share/man/man2/ioperm.2.gz
@@ -882,8 +883,6 @@ drwxr-xr-x root/root    usr/share/man/man3/
 -rw-r--r-- root/root    usr/share/man/man3/creal.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/crealf.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/creall.3.gz
--rw-r--r-- root/root    usr/share/man/man3/crypt.3.gz
--rw-r--r-- root/root    usr/share/man/man3/crypt_r.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/csin.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/csinf.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/csinh.3.gz
@@ -2349,6 +2348,7 @@ drwxr-xr-x root/root    usr/share/man/man5/
 -rw-r--r-- root/root    usr/share/man/man5/core.5.gz
 -rw-r--r-- root/root    usr/share/man/man5/dir_colors.5.gz
 -rw-r--r-- root/root    usr/share/man/man5/elf.5.gz
+-rw-r--r-- root/root    usr/share/man/man5/erofs.5.gz
 -rw-r--r-- root/root    usr/share/man/man5/filesystems.5.gz
 -rw-r--r-- root/root    usr/share/man/man5/fs.5.gz
 -rw-r--r-- root/root    usr/share/man/man5/ftpusers.5.gz

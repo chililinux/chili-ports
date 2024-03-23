@@ -2,10 +2,11 @@
 # depends	: apr-util libnghttp2 pcre2 libxml2 openssl
 
 name=apache
-version=2.4.57
-release=1
+version=2.4.58
+release=3
 source="https://archive.apache.org/dist/httpd/httpd-$version.tar.bz2
 	httpd-blfs_layout-1.patch::https://www.linuxfromscratch.org/patches/blfs/svn/httpd-$version-blfs_layout-1.patch
+	apache_libxml2-2.12.patch
 	rc.httpd
 	run.httpd"
 
@@ -15,8 +16,14 @@ build() {
 	# Forces the apxs utility to use absolute pathnames for modules, when instructed to do so
 	patch -Np1 -i $SRC/httpd-blfs_layout-1.patch
 
-	# Adapt the Lua module to API changes in Lua-5.4
-	sed -i 's/lua_resume(a, NULL, b)/lua_resume(a, NULL, b, NULL)/' modules/lua/mod_lua.h
+	patch -Np1 -i $SRC/apache_libxml2-2.12.patch	
+
+	sed '/dir.*CFG_PREFIX/s@^@#@' -i support/apxs.in
+
+	sed -e '/HTTPD_ROOT/s:${ap_prefix}:/etc/httpd:'       \
+	    -e '/SERVER_CONFIG_FILE/s:${rel_sysconfdir}/::'   \
+	    -e '/AP_TYPES_CONFIG_FILE/s:${rel_sysconfdir}/::' \
+	    -i configure 
 	
 	./configure --enable-authnz-fcgi                              \
 	            --enable-layout=BLFS                              \
@@ -38,9 +45,14 @@ build() {
 
 	rm -fr $PKG/var/run
 
+	_runit() {
 	# runit service
 	    install -Dm755 $SRC/run.httpd $PKG/etc/sv/httpd/run
 	    ln -s /run/runit/supervise.httpd $PKG/etc/sv/httpd/supervise
+	}
+	_sysv() {
 	# rc service
 	    install -Dm755 $SRC/rc.httpd $PKG/etc/rc.d/httpd
+	}
+	scratch isinstalled runit && _runit || _sysv
 }

@@ -8,11 +8,11 @@ LIVEUSER=venom
 PASSWORD=venom
 
 useradd -m -G users,wheel,audio,video -s /bin/bash $LIVEUSER
-passwd -d $LIVEUSER &>/dev/null
-passwd -d root &>/dev/null
+#passwd -d $LIVEUSER &>/dev/null
+#passwd -d root &>/dev/null
 
-echo "root:root" | chpasswd -c SHA512
-echo "$LIVEUSER:$PASSWORD" | chpasswd -c SHA512
+echo "root:$PASSWORD" | chpasswd -c YESCRYPT
+echo "$LIVEUSER:$PASSWORD" | chpasswd -c YESCRYPT
 
 # generate en_US locale
 sed 's/#\(en_US\.UTF-8\)/\1/' -i /etc/locales
@@ -56,7 +56,7 @@ elif [ -x /etc/rc.d/network ]; then
 	NETWORK=network
 fi
 
-for i in sysklogd dbus slim $NETWORK bluetooth; do
+for i in sysklogd dbus $NETWORK bluetooth; do
 	if [ -x /etc/rc.d/$i ]; then
 		daemon="$daemon $i"
 	fi

@@ -1,8 +1,8 @@
 # description	: Utilities used to display information about USB buses in the system and the devices connected to them
-# depends	: libusb
+# depends	: libusb hwdata
 
 name=usbutils
-version=015
+version=017
 release=1
 IGNORE_MDSUM=yes
 source="https://www.kernel.org/pub/linux/utils/usb/usbutils/$name-$version.tar.xz
@@ -14,7 +14,4 @@ build() {
 	./configure --prefix=/usr --datadir=/usr/share/hwdata
 	make
 	make DESTDIR=$PKG install
-
-	mkdir -p $PKG/usr/share/hwdata
-	cp $SRC/usb.ids $PKG/usr/share/hwdata/
 }

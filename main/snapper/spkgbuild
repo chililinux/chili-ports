@@ -1,9 +1,9 @@
 # description	    : A tool for managing BTRFS and LVM snapshots. It can create, diff and restore snapshots and provides timelined auto-snapping.
 # homepage	    : http://snapper.io
-# depends	    : btrfs-progs libxml2 dbus boost acl json-c libxstl docbook-xsl linux-pam git ncurses e2fsprogs
+# depends	    : btrfs-progs libxml2 dbus boost acl json-c libxslt docbook-xsl linux-pam git ncurses e2fsprogs
 
 name=snapper
-version=0.10.4
+version=0.10.7
 release=1
 source="https://github.com/openSUSE/snapper/archive/v$version/$name-$version.tar.gz
 	rc.snapperd
@@ -41,12 +41,16 @@ build() {
 		--disable-silent-rules
 	make
 	make DESTDIR=$PKG install
-	
+	rm -rf $PKG/usr/lib/snapper/testsuite/
+
+	_runit() {
 	# runit service
 	    install -Dm755 $SRC/run.snapperd $PKG/etc/sv/snapperd/run 
 	    ln -s /run/runit/supervise.snapperd $PKG/etc/sv/snapperd/supervise
+	}
+	_sysv() {
 	# rc service
 	    install -Dm755 $SRC/rc.snapperd $PKG/etc/rc.d/snapperd
-
-	rm -rf $PKG/usr/lib/snapper/testsuite/
+	}
+	scratch isinstalled runit && _runit || _sysv
 }

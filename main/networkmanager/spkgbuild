@@ -1,10 +1,10 @@
 # description	: Network connection manager and user applications
-# depends	: gobject-introspection vala glib libndp eudev curl util-linux nss nspr readline newt intltool libxslt dbus polkit python3-gobject3 gnutls
+# depends	: gobject-introspection vala glib libndp eudev curl util-linux nss nspr readline newt intltool libxslt dbus polkit python3-gobject3 gnutls wpa_supplicant
 # optionals	: modemmanager
 
 name=networkmanager
-version=1.42.6
-release=1
+version=1.44.2
+release=3
 backup="etc/NetworkManager/NetworkManager.conf"
 source="$name-$version.tar.xz::https://ftp.gnome.org/pub/gnome/sources/NetworkManager/${version%.*}/NetworkManager-$version.tar.xz
 	rc.$name
@@ -28,6 +28,7 @@ build() {
 	      -Ddocs=false               \
 	      -Dqt=false                 \
 	      -Dtests=no		 \
+	      -Dvapi=false	         \
 	      $OPT
 
 	meson compile -C build 
