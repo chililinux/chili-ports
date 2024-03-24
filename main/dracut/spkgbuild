@@ -1,0 +1,20 @@
+# description	: An event driven initramfs infrastructure
+# depends	: bash coreutils cpio filesystem findutils gawk grep kmod pkgconf procps-ng sed util-linux
+
+name=dracut
+version=059
+release=6
+source="https://github.com/dracutdevs/dracut/archive/refs/tags/$version.tar.gz"
+
+build() {
+	local prefix=/usr sysconfdir=/etc
+
+	cd $name-$version
+	./configure \
+    	--sysconfdir=${sysconfdir} \
+	    --prefix=${prefix} \
+	    --libdir=${prefix}/lib
+  	make
+	make DESTDIR=$PKG install
+}
+
